@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f6f1e8;
+  color: #2d241f;
+  font-family: var(--font-inter);
+  cursor: none;
+}
+
+a,
+button {
+  cursor: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+
+::selection {
+  background: #c9a66b;
+  color: #2d241f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3ece2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c9a66b, #9c6b3f);
+  border-radius: 9999px;
+}
+
+.luxury-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(156, 107, 63, 0.3), transparent 24%),
+    radial-gradient(circle at 85% 15%, rgba(201, 166, 107, 0.28), transparent 26%),
+    radial-gradient(circle at 50% 100%, rgba(255, 250, 243, 1), transparent 35%),
+    linear-gradient(135deg, #f3e6d2 0%, #fff7ec 45%, #dfc7a8 100%);
+}
+
+.luxury-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(156, 107, 63, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(156, 107, 63, 0.08) 1px, transparent 1px);
+  background-size: 70px 70px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.luxury-section::after {
+  content: "";
+  position: absolute;
+  inset: 35px;
+  border-radius: 42px;
+  border: 1px solid rgba(156, 107, 63, 0.18);
+  pointer-events: none;
+}
+
+.premium-card {
+  background: rgba(255, 250, 243, 0.62);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(220, 202, 178, 0.7);
+  box-shadow: 0 20px 80px rgba(45, 36, 31, 0.08);
+}
+
+.glow-line {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(201, 166, 107, 0.6),
+    transparent
+  );
+}
+
+.premium-hover {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.premium-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(156, 107, 63, 0.18);
+}
